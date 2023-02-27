@@ -1,0 +1,141 @@
+:root {
+    --image-frame-height: 770px;
+    --footer-heigth: 80px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 393px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff2f2;
+}
+
+/* 메인 페이지 */
+.main-page {
+    position: relative;
+    height: 100%;
+    background: inherit;
+}
+
+.main-page .title-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 287px;
+    height: 163px;
+    border: 4px solid #f288a4;
+    border-radius: 16px;
+    transform: translate(-50%, -50%);
+}
+
+.main-page .title-group .title {
+    font-size: 46px;
+    font-weight: bold;
+    color: #f288a4;
+}
+
+/* 이미지 페이지 */
+.image-page {
+    height: calc(var(--image-frame-height) + 100px);
+    padding-bottom: var(--footer-heigth);
+    background: inherit;
+}
+
+.img-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 280px;
+    height: var(--image-frame-height);
+    background: #f27575;
+    transform: translateY(45px);
+}
+
+.img-select {
+    margin-bottom: 16px;
+    width: 236px;
+    height: 143px;
+    background: #fff;
+}
+
+.img-select.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-select.empty:hover {
+    background-color: rgb(229, 229, 229);
+}
+
+.img-select:nth-child(1) {
+    margin-top: 20px;
+}
+
+.img-info {
+    color: #fff;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.img-info .info {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.img-info .title {
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.img-info .date {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 393px;
+    height: var(--footer-heigth);
+    background: #fdffff;
+}
+
+.btn {
+    width: 122px;
+    height: 54px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    background: #f288a4;
+}
+
+.footer .btn:hover {
+    color: white;
+    background: #db5a7c;
+}
+
+/* .footer button:nth-child(1) {
+    margin-right: 20px;
+} */
+
+/* 모달 */
