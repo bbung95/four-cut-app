@@ -15,6 +15,18 @@
                     <div class="title">뻥뻥네컷</div>
                 </div>
             </div>
+
+            <div class="next-page hidden">
+                <div class="info-group">
+                    <div class="img-area">
+                        <img src="./public/image/four-cur-example.jpg" />
+                    </div>
+                    <div class="info">가지고 있는<br />사진으로<br />네컷 이미지를 만들어보세요.</div>
+                </div>
+
+                <button class="btn start-btn">시작</button>
+            </div>
+
             <div class="image-page hidden">
                 <div class="img-frame">
                     <div class="img-select empty"></div>
@@ -30,7 +42,7 @@
                 </div>
                 <div class="footer">
                     <!-- <button class="btn">프레임 선택<br />(Frame Select)</button> -->
-                    <button class="btn">이미지 다운로드<br />(Image Download)</button>
+                    <button class="btn download-btn" type="button">이미지 다운로드<br />(Image Download)</button>
                 </div>
                 <input type="file" class="file-input hidden" accept=".jpeg, .png, .jpg" />
             </div>
@@ -49,6 +61,7 @@
             </div>
         </dialog> -->
 
+        <script src="public/library/html2canvas.min.js"></script>
         <script src="main.js" type="module"></script>
     </body>
 </html>

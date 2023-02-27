@@ -1,0 +1,91 @@
+/* 이미지 페이지 */
+.image-page {
+    height: calc(var(--image-frame-height) + 150px);
+    padding-bottom: var(--footer-heigth);
+    background: inherit;
+}
+
+.img-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 280px;
+    height: var(--image-frame-height);
+    background: #f27575;
+    transform: translateY(45px);
+}
+
+.img-select {
+    position: relative;
+    margin-bottom: 16px;
+    width: 236px;
+    height: 143px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.img-select.empty {
+    background-image: url("../image/free-icon-add.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-select.empty:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+.img-select:nth-child(1) {
+    margin-top: 20px;
+}
+
+.img-info {
+    color: #fff;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.img-info .info {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.img-info .title {
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.img-info .date {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 393px;
+    height: var(--footer-heigth);
+    background: #fdffff;
+}
+
+/* 이미지 */
+.img {
+    position: absolute;
+    width: 236px;
+    height: auto;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+/* .footer button:nth-child(1) {
+    margin-right: 20px;
+} */
+
+/* 모달 */

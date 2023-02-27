@@ -1,18 +1,10 @@
 import { get } from "../../utils/dom.js";
+import { getDate } from "./date.js";
 
 const $imageFrame = get(".img-frame");
 const $imageSelects = $imageFrame.querySelectorAll(".img-select");
 const $imageInfo = $imageFrame.querySelector(".img-info");
 const $file = get(".file-input");
-
-const getDate = () => {
-    const date = new Date();
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-
-    return `${year}.${month < 10 ? "0" + month : month}.${day < 10 ? "0" + day : day}`;
-};
 
 const setDate = () => {
     const $infoDate = $imageInfo.querySelector(".date");
@@ -46,6 +38,7 @@ const imagePreview = (target, event) => {
     };
 
     reader.readAsDataURL(event.target.files[0]);
+    $file.value = "";
 };
 
 const dragEvent = (target) => {

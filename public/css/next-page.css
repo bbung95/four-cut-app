@@ -1,0 +1,40 @@
+/* 페이지 */
+.next-page {
+    position: relative;
+    height: 100%;
+    background: inherit;
+}
+
+.next-page .info-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 320px;
+    height: 460px;
+    background-color: #fff;
+    border-radius: 16px;
+    transform: translate(-50%, -50%);
+}
+
+.next-page .info-group img {
+    width: 140px;
+    transform: rotateZ(-4deg);
+}
+
+.next-page .info-group .info {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    color: #f288a4;
+}
+
+.next-page .start-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
