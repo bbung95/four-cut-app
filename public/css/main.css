@@ -65,20 +65,22 @@ body {
 }
 
 .img-select {
+    position: relative;
     margin-bottom: 16px;
     width: 236px;
     height: 143px;
     background: #fff;
+    overflow: hidden;
 }
 
 .img-select.empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url("../image/free-icon-add.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .img-select.empty:hover {
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(247, 247, 247);
 }
 
 .img-select:nth-child(1) {
@@ -132,6 +134,18 @@ body {
 .footer .btn:hover {
     color: white;
     background: #db5a7c;
+}
+
+/* 이미지 */
+.img {
+    position: absolute;
+    width: 236px;
+    height: auto;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
 }
 
 /* .footer button:nth-child(1) {
