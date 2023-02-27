@@ -19,14 +19,28 @@ const imageUpload = (e) => {
         return;
     }
 
+    let node = e.target;
+
     $file.click();
-    $file.onchange = (event) => imagePreview(e.target, event);
+    $file.onchange = (event) => {
+        if (node.nodeName === "IMG") {
+            node = node.parentNode;
+        }
+
+        imagePreview(node, event);
+    };
+};
+
+const imageRemove = (target) => {
+    target.innerHTML = "";
 };
 
 const imagePreview = (target, event) => {
     var reader = new FileReader();
 
     if (!event.target.files[0]) return;
+
+    imageRemove(target);
 
     reader.onload = function (event) {
         var img = document.createElement("img");
