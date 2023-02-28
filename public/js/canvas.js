@@ -4,7 +4,7 @@ import { getDate } from "./date.js";
 const $imgFrame = get(".img-frame");
 
 export const capture = () => {
-    isValidate();
+    if (!isValidate()) return;
 
     html2canvas($imgFrame).then((canvas) => {
         saveAs(canvas.toDataURL("image/jpg"), `${getDate()}.jpg`);
@@ -17,8 +17,10 @@ const isValidate = () => {
     if ($imgEmpty.length > 0) {
         // 모달 추가 예정
         alert("이미지를 추가해주세요.");
-        return;
+        return false;
     }
+
+    return true;
 };
 
 const saveAs = (uri, filename) => {
