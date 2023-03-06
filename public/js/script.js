@@ -13,6 +13,18 @@ const setDate = () => {
     $infoDate.textContent = today;
 };
 
+const fileExtentionCheck = (event) => {
+    const $file = event.target;
+    const fileName = $file.files[0].name.toLowerCase();
+
+    if (fileName.endsWith("jpg") || fileName.endsWith("png") || fileName.endsWith("jpeg")) return true;
+
+    alert("png, jpg, jpeg 파일만 등록가능합니다.");
+    $file.value = "";
+
+    return false;
+};
+
 const imageUpload = (e) => {
     if (e.target.className.includes("drag")) {
         e.target.classList.remove("drag");
@@ -23,6 +35,8 @@ const imageUpload = (e) => {
 
     $file.click();
     $file.onchange = (event) => {
+        if (!fileExtentionCheck(event)) return;
+
         if (node.nodeName === "IMG") {
             node = node.parentNode;
         }
