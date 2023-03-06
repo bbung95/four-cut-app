@@ -42,25 +42,27 @@
                     </div>
                 </div>
                 <div class="footer">
-                    <!-- <button class="btn">프레임 선택<br />(Frame Select)</button> -->
+                    <button class="btn modal-btn" type="button">프레임 선택<br />(Frame Select)</button>
                     <button class="btn download-btn" type="button">이미지 다운로드<br />(Image Download)</button>
                 </div>
                 <input type="file" class="file-input hidden" accept=".jpeg, .png, .jpg" />
             </div>
         </div>
 
-        <!-- <dialog class="image-modal">
+        <dialog class="image-modal">
             <div class="image-select-area">
+                <!-- <div class="frame">프레임</div>
                 <div class="frame">프레임</div>
                 <div class="frame">프레임</div>
-                <div class="frame">프레임</div>
-                <div class="frame">프레임</div>
+                <div class="frame">프레임</div> -->
+                <div><label for="picker">프레임 색상 &nbsp;</label></div>
+                <input id="picker" type="color" class="color-picker" value="#f27575" />
             </div>
             <div class="btn-group">
-                <button>선택</button>
-                <button>취소</button>
+                <button class="btn btn-sm select-btn" type="button">선택</button>
+                <button class="btn btn-sm cancel-btn" type="button">취소</button>
             </div>
-        </dialog> -->
+        </dialog>
 
         <script src="public/library/html2canvas.min.js"></script>
         <script src="main.js" type="module"></script>

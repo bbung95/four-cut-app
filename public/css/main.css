@@ -13,6 +13,7 @@ body {
 }
 
 .container {
+    position: relative;
     width: 393px;
     height: 100%;
     margin: 0 auto;
@@ -33,4 +34,19 @@ body {
 .btn:hover {
     color: white;
     background: #db5a7c;
+}
+
+.btn-sm {
+    height: 36px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.cancel-btn {
+    background: gray;
+}
+
+.cancel-btn:hover {
+    background: lightgray;
+    color: #838282;
 }

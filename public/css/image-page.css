@@ -84,8 +84,37 @@
     user-drag: none;
 }
 
-/* .footer button:nth-child(1) {
+.footer button:nth-child(1) {
     margin-right: 20px;
-} */
+}
 
 /* 모달 */
+.image-modal {
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.image-modal .btn-group {
+    margin-top: 10px;
+}
+
+.image-modal .image-select-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+
+.color-picker {
+    padding: 0;
+    width: 80px;
+    border: none;
+}
+
+.show-modal {
+    overflow: hidden;
+}
